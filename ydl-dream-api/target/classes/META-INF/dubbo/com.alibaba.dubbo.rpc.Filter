@@ -1,0 +1,1 @@
+hystrix=com.ydl.common.filter.HystrixFilter
