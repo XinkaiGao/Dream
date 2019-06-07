@@ -12,8 +12,11 @@
 	<!--通过注册中心获取monitor地址后建立连接-->
 	<dubbo:monitor  address="${dubbo.monitor.address}" />
 	
-	<dubbo:consumer check="false" loadbalance="roundrobin" retries="0" timeout="10000" filter="hystrix" />
+	<dubbo:consumer check="false" loadbalance="roundrobin" retries="2" timeout="10000" filter="hystrix" />
 
+
+	<dubbo:reference id="doctorFacadeImpl"
+					 interface="com.ydl.dream.intf.facade.DoctorFacade" version="1.0.0" protocol="dubbo"/>
 
 </beans>
 

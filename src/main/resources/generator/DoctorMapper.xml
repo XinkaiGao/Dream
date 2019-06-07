@@ -1,0 +1,1936 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="generator.DoctorMapper">
+  <resultMap id="BaseResultMap" type="com.ydl.dream.intf.po.Doctor">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="uid" jdbcType="BIGINT" property="uid" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="small_image" jdbcType="VARCHAR" property="smallImage" />
+    <result column="head" jdbcType="VARCHAR" property="head" />
+    <result column="scene" jdbcType="VARCHAR" property="scene" />
+    <result column="big_image" jdbcType="VARCHAR" property="bigImage" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="hospital_id" jdbcType="INTEGER" property="hospitalId" />
+    <result column="hospital_name" jdbcType="VARCHAR" property="hospitalName" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="department_id" jdbcType="INTEGER" property="departmentId" />
+    <result column="department_name" jdbcType="VARCHAR" property="departmentName" />
+    <result column="recommend_index" jdbcType="INTEGER" property="recommendIndex" />
+    <result column="service_index" jdbcType="INTEGER" property="serviceIndex" />
+    <result column="physic_level" jdbcType="INTEGER" property="physicLevel" />
+    <result column="is_allow_consult" jdbcType="BIT" property="isAllowConsult" />
+    <result column="is_show" jdbcType="TINYINT" property="isShow" />
+    <result column="is_hot" jdbcType="BIT" property="isHot" />
+    <result column="reply_num" jdbcType="INTEGER" property="replyNum" />
+    <result column="fans_num" jdbcType="INTEGER" property="fansNum" />
+    <result column="tag_1" jdbcType="VARCHAR" property="tag1" />
+    <result column="tag_2" jdbcType="VARCHAR" property="tag2" />
+    <result column="tag_3" jdbcType="VARCHAR" property="tag3" />
+    <result column="image_idcard" jdbcType="VARCHAR" property="imageIdcard" />
+    <result column="image_idcard_thumb" jdbcType="VARCHAR" property="imageIdcardThumb" />
+    <result column="image_idcard_big" jdbcType="VARCHAR" property="imageIdcardBig" />
+    <result column="image_idcardr" jdbcType="VARCHAR" property="imageIdcardr" />
+    <result column="image_idcardr_thumb" jdbcType="VARCHAR" property="imageIdcardrThumb" />
+    <result column="image_idcardr_big" jdbcType="VARCHAR" property="imageIdcardrBig" />
+    <result column="image_profess_no" jdbcType="VARCHAR" property="imageProfessNo" />
+    <result column="image_profess" jdbcType="VARCHAR" property="imageProfess" />
+    <result column="image_profess_thumb" jdbcType="VARCHAR" property="imageProfessThumb" />
+    <result column="image_profess_big" jdbcType="VARCHAR" property="imageProfessBig" />
+    <result column="image_edu" jdbcType="VARCHAR" property="imageEdu" />
+    <result column="image_edu_thumb" jdbcType="VARCHAR" property="imageEduThumb" />
+    <result column="image_edu_big" jdbcType="VARCHAR" property="imageEduBig" />
+    <result column="image_marital" jdbcType="VARCHAR" property="imageMarital" />
+    <result column="image_total" jdbcType="VARCHAR" property="imageTotal" />
+    <result column="image_total_thumb" jdbcType="VARCHAR" property="imageTotalThumb" />
+    <result column="image_total_big" jdbcType="VARCHAR" property="imageTotalBig" />
+    <result column="image_train" jdbcType="VARCHAR" property="imageTrain" />
+    <result column="image_train_thumb" jdbcType="VARCHAR" property="imageTrainThumb" />
+    <result column="image_train_big" jdbcType="VARCHAR" property="imageTrainBig" />
+    <result column="fee_standard" jdbcType="TINYINT" property="feeStandard" />
+    <result column="is_auth" jdbcType="TINYINT" property="isAuth" />
+    <result column="wechar_num" jdbcType="VARCHAR" property="wecharNum" />
+    <result column="edu" jdbcType="TINYINT" property="edu" />
+    <result column="famous_remark" jdbcType="VARCHAR" property="famousRemark" />
+    <result column="ask_total_time" jdbcType="INTEGER" property="askTotalTime" />
+    <result column="order_num" jdbcType="INTEGER" property="orderNum" />
+    <result column="is_tj_index" jdbcType="TINYINT" property="isTjIndex" />
+    <result column="tj_index_reason" jdbcType="VARCHAR" property="tjIndexReason" />
+    <result column="is_supervisor" jdbcType="TINYINT" property="isSupervisor" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="is_join_listen" jdbcType="TINYINT" property="isJoinListen" />
+    <result column="order_zan" jdbcType="INTEGER" property="orderZan" />
+    <result column="nohelp_num" jdbcType="INTEGER" property="nohelpNum" />
+    <result column="order_ans" jdbcType="INTEGER" property="orderAns" />
+    <result column="order_ava_ans_time" jdbcType="INTEGER" property="orderAvaAnsTime" />
+    <result column="work_years" jdbcType="TINYINT" property="workYears" />
+    <result column="temp_scene" jdbcType="VARCHAR" property="tempScene" />
+    <result column="line_default_content" jdbcType="VARCHAR" property="lineDefaultContent" />
+    <result column="home_address" jdbcType="VARCHAR" property="homeAddress" />
+    <result column="consult_room_type" jdbcType="TINYINT" property="consultRoomType" />
+    <result column="face_consult_address" jdbcType="VARCHAR" property="faceConsultAddress" />
+    <result column="special_push" jdbcType="TINYINT" property="specialPush" />
+    <result column="show_position" jdbcType="TINYINT" property="showPosition" />
+    <result column="yun_client_id" jdbcType="VARCHAR" property="yunClientId" />
+    <result column="agent" jdbcType="INTEGER" property="agent" />
+    <result column="fee_rate" jdbcType="INTEGER" property="feeRate" />
+    <result column="fee_rate_wechat" jdbcType="INTEGER" property="feeRateWechat" />
+    <result column="organize_id" jdbcType="INTEGER" property="organizeId" />
+    <result column="referrer" jdbcType="VARCHAR" property="referrer" />
+    <result column="is_taobao_sunday" jdbcType="TINYINT" property="isTaobaoSunday" />
+    <result column="is_chat_online" jdbcType="BIT" property="isChatOnline" />
+    <result column="set_online_time" jdbcType="INTEGER" property="setOnlineTime" />
+    <result column="chat_auto_reply" jdbcType="VARCHAR" property="chatAutoReply" />
+    <result column="job_cat" jdbcType="TINYINT" property="jobCat" />
+    <result column="job_remark" jdbcType="VARCHAR" property="jobRemark" />
+    <result column="rec_app" jdbcType="TINYINT" property="recApp" />
+    <result column="rec_remark" jdbcType="VARCHAR" property="recRemark" />
+    <result column="group" jdbcType="INTEGER" property="group" />
+    <result column="reply_violate" jdbcType="BIT" property="replyViolate" />
+    <result column="pseudonym" jdbcType="VARCHAR" property="pseudonym" />
+    <result column="level" jdbcType="TINYINT" property="level" />
+    <result column="ability_level" jdbcType="TINYINT" property="abilityLevel" />
+    <result column="business_level" jdbcType="TINYINT" property="businessLevel" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.ydl.dream.intf.po.DoctorWithBLOBs">
+    <result column="description" jdbcType="LONGVARCHAR" property="description" />
+    <result column="profes_back" jdbcType="LONGVARCHAR" property="profesBack" />
+    <result column="good_at" jdbcType="LONGVARCHAR" property="goodAt" />
+    <result column="consult_style" jdbcType="LONGVARCHAR" property="consultStyle" />
+    <result column="training_background" jdbcType="LONGVARCHAR" property="trainingBackground" />
+    <result column="free_time" jdbcType="LONGVARCHAR" property="freeTime" />
+    <result column="new_booking_time" jdbcType="LONGVARCHAR" property="newBookingTime" />
+    <result column="push_msg_count" jdbcType="LONGVARCHAR" property="pushMsgCount" />
+    <result column="rec_desc" jdbcType="LONGVARCHAR" property="recDesc" />
+    <result column="first_default_reply" jdbcType="LONGVARCHAR" property="firstDefaultReply" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, `uid`, `name`, small_image, head, scene, big_image, title, hospital_id, hospital_name, 
+    address, department_id, department_name, recommend_index, service_index, physic_level, 
+    is_allow_consult, is_show, is_hot, reply_num, fans_num, tag_1, tag_2, tag_3, image_idcard, 
+    image_idcard_thumb, image_idcard_big, image_idcardr, image_idcardr_thumb, image_idcardr_big, 
+    image_profess_no, image_profess, image_profess_thumb, image_profess_big, image_edu, 
+    image_edu_thumb, image_edu_big, image_marital, image_total, image_total_thumb, image_total_big, 
+    image_train, image_train_thumb, image_train_big, fee_standard, is_auth, wechar_num, 
+    edu, famous_remark, ask_total_time, order_num, is_tj_index, tj_index_reason, is_supervisor, 
+    `status`, create_time, update_time, is_join_listen, order_zan, nohelp_num, order_ans, 
+    order_ava_ans_time, work_years, temp_scene, line_default_content, home_address, consult_room_type, 
+    face_consult_address, special_push, show_position, yun_client_id, agent, fee_rate, 
+    fee_rate_wechat, organize_id, referrer, is_taobao_sunday, is_chat_online, set_online_time, 
+    chat_auto_reply, job_cat, job_remark, rec_app, rec_remark, `group`, reply_violate, 
+    pseudonym, `level`, ability_level, business_level
+  </sql>
+  <sql id="Blob_Column_List">
+    description, profes_back, good_at, consult_style, training_background, free_time, 
+    new_booking_time, push_msg_count, rec_desc, first_default_reply
+  </sql>
+  <select id="selectByExampleWithBLOBs" parameterType="com.ydl.dream.intf.po.DoctorExample" resultMap="ResultMapWithBLOBs">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from doctor
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+    <if test="limit != null">
+      <if test="offset != null">
+        limit ${offset}, ${limit}
+      </if>
+      <if test="offset == null">
+        limit ${limit}
+      </if>
+    </if>
+  </select>
+  <select id="selectByExample" parameterType="com.ydl.dream.intf.po.DoctorExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from doctor
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+    <if test="limit != null">
+      <if test="offset != null">
+        limit ${offset}, ${limit}
+      </if>
+      <if test="offset == null">
+        limit ${limit}
+      </if>
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from doctor
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from doctor
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.ydl.dream.intf.po.DoctorExample">
+    delete from doctor
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.ydl.dream.intf.po.DoctorWithBLOBs" useGeneratedKeys="true">
+    insert into doctor (`uid`, `name`, small_image, 
+      head, scene, big_image, 
+      title, hospital_id, hospital_name, 
+      address, department_id, department_name, 
+      recommend_index, service_index, physic_level, 
+      is_allow_consult, is_show, is_hot, 
+      reply_num, fans_num, tag_1, 
+      tag_2, tag_3, image_idcard, 
+      image_idcard_thumb, image_idcard_big, image_idcardr, 
+      image_idcardr_thumb, image_idcardr_big, image_profess_no, 
+      image_profess, image_profess_thumb, image_profess_big, 
+      image_edu, image_edu_thumb, image_edu_big, 
+      image_marital, image_total, image_total_thumb, 
+      image_total_big, image_train, image_train_thumb, 
+      image_train_big, fee_standard, is_auth, 
+      wechar_num, edu, famous_remark, 
+      ask_total_time, order_num, is_tj_index, 
+      tj_index_reason, is_supervisor, `status`, 
+      create_time, update_time, is_join_listen, 
+      order_zan, nohelp_num, order_ans, 
+      order_ava_ans_time, work_years, temp_scene, 
+      line_default_content, home_address, consult_room_type, 
+      face_consult_address, special_push, show_position, 
+      yun_client_id, agent, fee_rate, 
+      fee_rate_wechat, organize_id, referrer, 
+      is_taobao_sunday, is_chat_online, set_online_time, 
+      chat_auto_reply, job_cat, job_remark, 
+      rec_app, rec_remark, `group`, 
+      reply_violate, pseudonym, `level`, 
+      ability_level, business_level, description, 
+      profes_back, good_at, consult_style, 
+      training_background, free_time, new_booking_time, 
+      push_msg_count, rec_desc, first_default_reply
+      )
+    values (#{uid,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{smallImage,jdbcType=VARCHAR}, 
+      #{head,jdbcType=VARCHAR}, #{scene,jdbcType=VARCHAR}, #{bigImage,jdbcType=VARCHAR}, 
+      #{title,jdbcType=VARCHAR}, #{hospitalId,jdbcType=INTEGER}, #{hospitalName,jdbcType=VARCHAR}, 
+      #{address,jdbcType=VARCHAR}, #{departmentId,jdbcType=INTEGER}, #{departmentName,jdbcType=VARCHAR}, 
+      #{recommendIndex,jdbcType=INTEGER}, #{serviceIndex,jdbcType=INTEGER}, #{physicLevel,jdbcType=INTEGER}, 
+      #{isAllowConsult,jdbcType=BIT}, #{isShow,jdbcType=TINYINT}, #{isHot,jdbcType=BIT}, 
+      #{replyNum,jdbcType=INTEGER}, #{fansNum,jdbcType=INTEGER}, #{tag1,jdbcType=VARCHAR}, 
+      #{tag2,jdbcType=VARCHAR}, #{tag3,jdbcType=VARCHAR}, #{imageIdcard,jdbcType=VARCHAR}, 
+      #{imageIdcardThumb,jdbcType=VARCHAR}, #{imageIdcardBig,jdbcType=VARCHAR}, #{imageIdcardr,jdbcType=VARCHAR}, 
+      #{imageIdcardrThumb,jdbcType=VARCHAR}, #{imageIdcardrBig,jdbcType=VARCHAR}, #{imageProfessNo,jdbcType=VARCHAR}, 
+      #{imageProfess,jdbcType=VARCHAR}, #{imageProfessThumb,jdbcType=VARCHAR}, #{imageProfessBig,jdbcType=VARCHAR}, 
+      #{imageEdu,jdbcType=VARCHAR}, #{imageEduThumb,jdbcType=VARCHAR}, #{imageEduBig,jdbcType=VARCHAR}, 
+      #{imageMarital,jdbcType=VARCHAR}, #{imageTotal,jdbcType=VARCHAR}, #{imageTotalThumb,jdbcType=VARCHAR}, 
+      #{imageTotalBig,jdbcType=VARCHAR}, #{imageTrain,jdbcType=VARCHAR}, #{imageTrainThumb,jdbcType=VARCHAR}, 
+      #{imageTrainBig,jdbcType=VARCHAR}, #{feeStandard,jdbcType=TINYINT}, #{isAuth,jdbcType=TINYINT}, 
+      #{wecharNum,jdbcType=VARCHAR}, #{edu,jdbcType=TINYINT}, #{famousRemark,jdbcType=VARCHAR}, 
+      #{askTotalTime,jdbcType=INTEGER}, #{orderNum,jdbcType=INTEGER}, #{isTjIndex,jdbcType=TINYINT}, 
+      #{tjIndexReason,jdbcType=VARCHAR}, #{isSupervisor,jdbcType=TINYINT}, #{status,jdbcType=TINYINT}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{isJoinListen,jdbcType=TINYINT}, 
+      #{orderZan,jdbcType=INTEGER}, #{nohelpNum,jdbcType=INTEGER}, #{orderAns,jdbcType=INTEGER}, 
+      #{orderAvaAnsTime,jdbcType=INTEGER}, #{workYears,jdbcType=TINYINT}, #{tempScene,jdbcType=VARCHAR}, 
+      #{lineDefaultContent,jdbcType=VARCHAR}, #{homeAddress,jdbcType=VARCHAR}, #{consultRoomType,jdbcType=TINYINT}, 
+      #{faceConsultAddress,jdbcType=VARCHAR}, #{specialPush,jdbcType=TINYINT}, #{showPosition,jdbcType=TINYINT}, 
+      #{yunClientId,jdbcType=VARCHAR}, #{agent,jdbcType=INTEGER}, #{feeRate,jdbcType=INTEGER}, 
+      #{feeRateWechat,jdbcType=INTEGER}, #{organizeId,jdbcType=INTEGER}, #{referrer,jdbcType=VARCHAR}, 
+      #{isTaobaoSunday,jdbcType=TINYINT}, #{isChatOnline,jdbcType=BIT}, #{setOnlineTime,jdbcType=INTEGER}, 
+      #{chatAutoReply,jdbcType=VARCHAR}, #{jobCat,jdbcType=TINYINT}, #{jobRemark,jdbcType=VARCHAR}, 
+      #{recApp,jdbcType=TINYINT}, #{recRemark,jdbcType=VARCHAR}, #{group,jdbcType=INTEGER}, 
+      #{replyViolate,jdbcType=BIT}, #{pseudonym,jdbcType=VARCHAR}, #{level,jdbcType=TINYINT}, 
+      #{abilityLevel,jdbcType=TINYINT}, #{businessLevel,jdbcType=TINYINT}, #{description,jdbcType=LONGVARCHAR}, 
+      #{profesBack,jdbcType=LONGVARCHAR}, #{goodAt,jdbcType=LONGVARCHAR}, #{consultStyle,jdbcType=LONGVARCHAR}, 
+      #{trainingBackground,jdbcType=LONGVARCHAR}, #{freeTime,jdbcType=LONGVARCHAR}, #{newBookingTime,jdbcType=LONGVARCHAR}, 
+      #{pushMsgCount,jdbcType=LONGVARCHAR}, #{recDesc,jdbcType=LONGVARCHAR}, #{firstDefaultReply,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.ydl.dream.intf.po.DoctorWithBLOBs" useGeneratedKeys="true">
+    insert into doctor
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="uid != null">
+        `uid`,
+      </if>
+      <if test="name != null">
+        `name`,
+      </if>
+      <if test="smallImage != null">
+        small_image,
+      </if>
+      <if test="head != null">
+        head,
+      </if>
+      <if test="scene != null">
+        scene,
+      </if>
+      <if test="bigImage != null">
+        big_image,
+      </if>
+      <if test="title != null">
+        title,
+      </if>
+      <if test="hospitalId != null">
+        hospital_id,
+      </if>
+      <if test="hospitalName != null">
+        hospital_name,
+      </if>
+      <if test="address != null">
+        address,
+      </if>
+      <if test="departmentId != null">
+        department_id,
+      </if>
+      <if test="departmentName != null">
+        department_name,
+      </if>
+      <if test="recommendIndex != null">
+        recommend_index,
+      </if>
+      <if test="serviceIndex != null">
+        service_index,
+      </if>
+      <if test="physicLevel != null">
+        physic_level,
+      </if>
+      <if test="isAllowConsult != null">
+        is_allow_consult,
+      </if>
+      <if test="isShow != null">
+        is_show,
+      </if>
+      <if test="isHot != null">
+        is_hot,
+      </if>
+      <if test="replyNum != null">
+        reply_num,
+      </if>
+      <if test="fansNum != null">
+        fans_num,
+      </if>
+      <if test="tag1 != null">
+        tag_1,
+      </if>
+      <if test="tag2 != null">
+        tag_2,
+      </if>
+      <if test="tag3 != null">
+        tag_3,
+      </if>
+      <if test="imageIdcard != null">
+        image_idcard,
+      </if>
+      <if test="imageIdcardThumb != null">
+        image_idcard_thumb,
+      </if>
+      <if test="imageIdcardBig != null">
+        image_idcard_big,
+      </if>
+      <if test="imageIdcardr != null">
+        image_idcardr,
+      </if>
+      <if test="imageIdcardrThumb != null">
+        image_idcardr_thumb,
+      </if>
+      <if test="imageIdcardrBig != null">
+        image_idcardr_big,
+      </if>
+      <if test="imageProfessNo != null">
+        image_profess_no,
+      </if>
+      <if test="imageProfess != null">
+        image_profess,
+      </if>
+      <if test="imageProfessThumb != null">
+        image_profess_thumb,
+      </if>
+      <if test="imageProfessBig != null">
+        image_profess_big,
+      </if>
+      <if test="imageEdu != null">
+        image_edu,
+      </if>
+      <if test="imageEduThumb != null">
+        image_edu_thumb,
+      </if>
+      <if test="imageEduBig != null">
+        image_edu_big,
+      </if>
+      <if test="imageMarital != null">
+        image_marital,
+      </if>
+      <if test="imageTotal != null">
+        image_total,
+      </if>
+      <if test="imageTotalThumb != null">
+        image_total_thumb,
+      </if>
+      <if test="imageTotalBig != null">
+        image_total_big,
+      </if>
+      <if test="imageTrain != null">
+        image_train,
+      </if>
+      <if test="imageTrainThumb != null">
+        image_train_thumb,
+      </if>
+      <if test="imageTrainBig != null">
+        image_train_big,
+      </if>
+      <if test="feeStandard != null">
+        fee_standard,
+      </if>
+      <if test="isAuth != null">
+        is_auth,
+      </if>
+      <if test="wecharNum != null">
+        wechar_num,
+      </if>
+      <if test="edu != null">
+        edu,
+      </if>
+      <if test="famousRemark != null">
+        famous_remark,
+      </if>
+      <if test="askTotalTime != null">
+        ask_total_time,
+      </if>
+      <if test="orderNum != null">
+        order_num,
+      </if>
+      <if test="isTjIndex != null">
+        is_tj_index,
+      </if>
+      <if test="tjIndexReason != null">
+        tj_index_reason,
+      </if>
+      <if test="isSupervisor != null">
+        is_supervisor,
+      </if>
+      <if test="status != null">
+        `status`,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+      <if test="isJoinListen != null">
+        is_join_listen,
+      </if>
+      <if test="orderZan != null">
+        order_zan,
+      </if>
+      <if test="nohelpNum != null">
+        nohelp_num,
+      </if>
+      <if test="orderAns != null">
+        order_ans,
+      </if>
+      <if test="orderAvaAnsTime != null">
+        order_ava_ans_time,
+      </if>
+      <if test="workYears != null">
+        work_years,
+      </if>
+      <if test="tempScene != null">
+        temp_scene,
+      </if>
+      <if test="lineDefaultContent != null">
+        line_default_content,
+      </if>
+      <if test="homeAddress != null">
+        home_address,
+      </if>
+      <if test="consultRoomType != null">
+        consult_room_type,
+      </if>
+      <if test="faceConsultAddress != null">
+        face_consult_address,
+      </if>
+      <if test="specialPush != null">
+        special_push,
+      </if>
+      <if test="showPosition != null">
+        show_position,
+      </if>
+      <if test="yunClientId != null">
+        yun_client_id,
+      </if>
+      <if test="agent != null">
+        agent,
+      </if>
+      <if test="feeRate != null">
+        fee_rate,
+      </if>
+      <if test="feeRateWechat != null">
+        fee_rate_wechat,
+      </if>
+      <if test="organizeId != null">
+        organize_id,
+      </if>
+      <if test="referrer != null">
+        referrer,
+      </if>
+      <if test="isTaobaoSunday != null">
+        is_taobao_sunday,
+      </if>
+      <if test="isChatOnline != null">
+        is_chat_online,
+      </if>
+      <if test="setOnlineTime != null">
+        set_online_time,
+      </if>
+      <if test="chatAutoReply != null">
+        chat_auto_reply,
+      </if>
+      <if test="jobCat != null">
+        job_cat,
+      </if>
+      <if test="jobRemark != null">
+        job_remark,
+      </if>
+      <if test="recApp != null">
+        rec_app,
+      </if>
+      <if test="recRemark != null">
+        rec_remark,
+      </if>
+      <if test="group != null">
+        `group`,
+      </if>
+      <if test="replyViolate != null">
+        reply_violate,
+      </if>
+      <if test="pseudonym != null">
+        pseudonym,
+      </if>
+      <if test="level != null">
+        `level`,
+      </if>
+      <if test="abilityLevel != null">
+        ability_level,
+      </if>
+      <if test="businessLevel != null">
+        business_level,
+      </if>
+      <if test="description != null">
+        description,
+      </if>
+      <if test="profesBack != null">
+        profes_back,
+      </if>
+      <if test="goodAt != null">
+        good_at,
+      </if>
+      <if test="consultStyle != null">
+        consult_style,
+      </if>
+      <if test="trainingBackground != null">
+        training_background,
+      </if>
+      <if test="freeTime != null">
+        free_time,
+      </if>
+      <if test="newBookingTime != null">
+        new_booking_time,
+      </if>
+      <if test="pushMsgCount != null">
+        push_msg_count,
+      </if>
+      <if test="recDesc != null">
+        rec_desc,
+      </if>
+      <if test="firstDefaultReply != null">
+        first_default_reply,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="uid != null">
+        #{uid,jdbcType=BIGINT},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="smallImage != null">
+        #{smallImage,jdbcType=VARCHAR},
+      </if>
+      <if test="head != null">
+        #{head,jdbcType=VARCHAR},
+      </if>
+      <if test="scene != null">
+        #{scene,jdbcType=VARCHAR},
+      </if>
+      <if test="bigImage != null">
+        #{bigImage,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="hospitalId != null">
+        #{hospitalId,jdbcType=INTEGER},
+      </if>
+      <if test="hospitalName != null">
+        #{hospitalName,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="departmentId != null">
+        #{departmentId,jdbcType=INTEGER},
+      </if>
+      <if test="departmentName != null">
+        #{departmentName,jdbcType=VARCHAR},
+      </if>
+      <if test="recommendIndex != null">
+        #{recommendIndex,jdbcType=INTEGER},
+      </if>
+      <if test="serviceIndex != null">
+        #{serviceIndex,jdbcType=INTEGER},
+      </if>
+      <if test="physicLevel != null">
+        #{physicLevel,jdbcType=INTEGER},
+      </if>
+      <if test="isAllowConsult != null">
+        #{isAllowConsult,jdbcType=BIT},
+      </if>
+      <if test="isShow != null">
+        #{isShow,jdbcType=TINYINT},
+      </if>
+      <if test="isHot != null">
+        #{isHot,jdbcType=BIT},
+      </if>
+      <if test="replyNum != null">
+        #{replyNum,jdbcType=INTEGER},
+      </if>
+      <if test="fansNum != null">
+        #{fansNum,jdbcType=INTEGER},
+      </if>
+      <if test="tag1 != null">
+        #{tag1,jdbcType=VARCHAR},
+      </if>
+      <if test="tag2 != null">
+        #{tag2,jdbcType=VARCHAR},
+      </if>
+      <if test="tag3 != null">
+        #{tag3,jdbcType=VARCHAR},
+      </if>
+      <if test="imageIdcard != null">
+        #{imageIdcard,jdbcType=VARCHAR},
+      </if>
+      <if test="imageIdcardThumb != null">
+        #{imageIdcardThumb,jdbcType=VARCHAR},
+      </if>
+      <if test="imageIdcardBig != null">
+        #{imageIdcardBig,jdbcType=VARCHAR},
+      </if>
+      <if test="imageIdcardr != null">
+        #{imageIdcardr,jdbcType=VARCHAR},
+      </if>
+      <if test="imageIdcardrThumb != null">
+        #{imageIdcardrThumb,jdbcType=VARCHAR},
+      </if>
+      <if test="imageIdcardrBig != null">
+        #{imageIdcardrBig,jdbcType=VARCHAR},
+      </if>
+      <if test="imageProfessNo != null">
+        #{imageProfessNo,jdbcType=VARCHAR},
+      </if>
+      <if test="imageProfess != null">
+        #{imageProfess,jdbcType=VARCHAR},
+      </if>
+      <if test="imageProfessThumb != null">
+        #{imageProfessThumb,jdbcType=VARCHAR},
+      </if>
+      <if test="imageProfessBig != null">
+        #{imageProfessBig,jdbcType=VARCHAR},
+      </if>
+      <if test="imageEdu != null">
+        #{imageEdu,jdbcType=VARCHAR},
+      </if>
+      <if test="imageEduThumb != null">
+        #{imageEduThumb,jdbcType=VARCHAR},
+      </if>
+      <if test="imageEduBig != null">
+        #{imageEduBig,jdbcType=VARCHAR},
+      </if>
+      <if test="imageMarital != null">
+        #{imageMarital,jdbcType=VARCHAR},
+      </if>
+      <if test="imageTotal != null">
+        #{imageTotal,jdbcType=VARCHAR},
+      </if>
+      <if test="imageTotalThumb != null">
+        #{imageTotalThumb,jdbcType=VARCHAR},
+      </if>
+      <if test="imageTotalBig != null">
+        #{imageTotalBig,jdbcType=VARCHAR},
+      </if>
+      <if test="imageTrain != null">
+        #{imageTrain,jdbcType=VARCHAR},
+      </if>
+      <if test="imageTrainThumb != null">
+        #{imageTrainThumb,jdbcType=VARCHAR},
+      </if>
+      <if test="imageTrainBig != null">
+        #{imageTrainBig,jdbcType=VARCHAR},
+      </if>
+      <if test="feeStandard != null">
+        #{feeStandard,jdbcType=TINYINT},
+      </if>
+      <if test="isAuth != null">
+        #{isAuth,jdbcType=TINYINT},
+      </if>
+      <if test="wecharNum != null">
+        #{wecharNum,jdbcType=VARCHAR},
+      </if>
+      <if test="edu != null">
+        #{edu,jdbcType=TINYINT},
+      </if>
+      <if test="famousRemark != null">
+        #{famousRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="askTotalTime != null">
+        #{askTotalTime,jdbcType=INTEGER},
+      </if>
+      <if test="orderNum != null">
+        #{orderNum,jdbcType=INTEGER},
+      </if>
+      <if test="isTjIndex != null">
+        #{isTjIndex,jdbcType=TINYINT},
+      </if>
+      <if test="tjIndexReason != null">
+        #{tjIndexReason,jdbcType=VARCHAR},
+      </if>
+      <if test="isSupervisor != null">
+        #{isSupervisor,jdbcType=TINYINT},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=TINYINT},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isJoinListen != null">
+        #{isJoinListen,jdbcType=TINYINT},
+      </if>
+      <if test="orderZan != null">
+        #{orderZan,jdbcType=INTEGER},
+      </if>
+      <if test="nohelpNum != null">
+        #{nohelpNum,jdbcType=INTEGER},
+      </if>
+      <if test="orderAns != null">
+        #{orderAns,jdbcType=INTEGER},
+      </if>
+      <if test="orderAvaAnsTime != null">
+        #{orderAvaAnsTime,jdbcType=INTEGER},
+      </if>
+      <if test="workYears != null">
+        #{workYears,jdbcType=TINYINT},
+      </if>
+      <if test="tempScene != null">
+        #{tempScene,jdbcType=VARCHAR},
+      </if>
+      <if test="lineDefaultContent != null">
+        #{lineDefaultContent,jdbcType=VARCHAR},
+      </if>
+      <if test="homeAddress != null">
+        #{homeAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="consultRoomType != null">
+        #{consultRoomType,jdbcType=TINYINT},
+      </if>
+      <if test="faceConsultAddress != null">
+        #{faceConsultAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="specialPush != null">
+        #{specialPush,jdbcType=TINYINT},
+      </if>
+      <if test="showPosition != null">
+        #{showPosition,jdbcType=TINYINT},
+      </if>
+      <if test="yunClientId != null">
+        #{yunClientId,jdbcType=VARCHAR},
+      </if>
+      <if test="agent != null">
+        #{agent,jdbcType=INTEGER},
+      </if>
+      <if test="feeRate != null">
+        #{feeRate,jdbcType=INTEGER},
+      </if>
+      <if test="feeRateWechat != null">
+        #{feeRateWechat,jdbcType=INTEGER},
+      </if>
+      <if test="organizeId != null">
+        #{organizeId,jdbcType=INTEGER},
+      </if>
+      <if test="referrer != null">
+        #{referrer,jdbcType=VARCHAR},
+      </if>
+      <if test="isTaobaoSunday != null">
+        #{isTaobaoSunday,jdbcType=TINYINT},
+      </if>
+      <if test="isChatOnline != null">
+        #{isChatOnline,jdbcType=BIT},
+      </if>
+      <if test="setOnlineTime != null">
+        #{setOnlineTime,jdbcType=INTEGER},
+      </if>
+      <if test="chatAutoReply != null">
+        #{chatAutoReply,jdbcType=VARCHAR},
+      </if>
+      <if test="jobCat != null">
+        #{jobCat,jdbcType=TINYINT},
+      </if>
+      <if test="jobRemark != null">
+        #{jobRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="recApp != null">
+        #{recApp,jdbcType=TINYINT},
+      </if>
+      <if test="recRemark != null">
+        #{recRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="group != null">
+        #{group,jdbcType=INTEGER},
+      </if>
+      <if test="replyViolate != null">
+        #{replyViolate,jdbcType=BIT},
+      </if>
+      <if test="pseudonym != null">
+        #{pseudonym,jdbcType=VARCHAR},
+      </if>
+      <if test="level != null">
+        #{level,jdbcType=TINYINT},
+      </if>
+      <if test="abilityLevel != null">
+        #{abilityLevel,jdbcType=TINYINT},
+      </if>
+      <if test="businessLevel != null">
+        #{businessLevel,jdbcType=TINYINT},
+      </if>
+      <if test="description != null">
+        #{description,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="profesBack != null">
+        #{profesBack,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="goodAt != null">
+        #{goodAt,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="consultStyle != null">
+        #{consultStyle,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="trainingBackground != null">
+        #{trainingBackground,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="freeTime != null">
+        #{freeTime,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="newBookingTime != null">
+        #{newBookingTime,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="pushMsgCount != null">
+        #{pushMsgCount,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="recDesc != null">
+        #{recDesc,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="firstDefaultReply != null">
+        #{firstDefaultReply,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.ydl.dream.intf.po.DoctorExample" resultType="java.lang.Long">
+    select count(*) from doctor
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update doctor
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.uid != null">
+        `uid` = #{record.uid,jdbcType=BIGINT},
+      </if>
+      <if test="record.name != null">
+        `name` = #{record.name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.smallImage != null">
+        small_image = #{record.smallImage,jdbcType=VARCHAR},
+      </if>
+      <if test="record.head != null">
+        head = #{record.head,jdbcType=VARCHAR},
+      </if>
+      <if test="record.scene != null">
+        scene = #{record.scene,jdbcType=VARCHAR},
+      </if>
+      <if test="record.bigImage != null">
+        big_image = #{record.bigImage,jdbcType=VARCHAR},
+      </if>
+      <if test="record.title != null">
+        title = #{record.title,jdbcType=VARCHAR},
+      </if>
+      <if test="record.hospitalId != null">
+        hospital_id = #{record.hospitalId,jdbcType=INTEGER},
+      </if>
+      <if test="record.hospitalName != null">
+        hospital_name = #{record.hospitalName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.address != null">
+        address = #{record.address,jdbcType=VARCHAR},
+      </if>
+      <if test="record.departmentId != null">
+        department_id = #{record.departmentId,jdbcType=INTEGER},
+      </if>
+      <if test="record.departmentName != null">
+        department_name = #{record.departmentName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.recommendIndex != null">
+        recommend_index = #{record.recommendIndex,jdbcType=INTEGER},
+      </if>
+      <if test="record.serviceIndex != null">
+        service_index = #{record.serviceIndex,jdbcType=INTEGER},
+      </if>
+      <if test="record.physicLevel != null">
+        physic_level = #{record.physicLevel,jdbcType=INTEGER},
+      </if>
+      <if test="record.isAllowConsult != null">
+        is_allow_consult = #{record.isAllowConsult,jdbcType=BIT},
+      </if>
+      <if test="record.isShow != null">
+        is_show = #{record.isShow,jdbcType=TINYINT},
+      </if>
+      <if test="record.isHot != null">
+        is_hot = #{record.isHot,jdbcType=BIT},
+      </if>
+      <if test="record.replyNum != null">
+        reply_num = #{record.replyNum,jdbcType=INTEGER},
+      </if>
+      <if test="record.fansNum != null">
+        fans_num = #{record.fansNum,jdbcType=INTEGER},
+      </if>
+      <if test="record.tag1 != null">
+        tag_1 = #{record.tag1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.tag2 != null">
+        tag_2 = #{record.tag2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.tag3 != null">
+        tag_3 = #{record.tag3,jdbcType=VARCHAR},
+      </if>
+      <if test="record.imageIdcard != null">
+        image_idcard = #{record.imageIdcard,jdbcType=VARCHAR},
+      </if>
+      <if test="record.imageIdcardThumb != null">
+        image_idcard_thumb = #{record.imageIdcardThumb,jdbcType=VARCHAR},
+      </if>
+      <if test="record.imageIdcardBig != null">
+        image_idcard_big = #{record.imageIdcardBig,jdbcType=VARCHAR},
+      </if>
+      <if test="record.imageIdcardr != null">
+        image_idcardr = #{record.imageIdcardr,jdbcType=VARCHAR},
+      </if>
+      <if test="record.imageIdcardrThumb != null">
+        image_idcardr_thumb = #{record.imageIdcardrThumb,jdbcType=VARCHAR},
+      </if>
+      <if test="record.imageIdcardrBig != null">
+        image_idcardr_big = #{record.imageIdcardrBig,jdbcType=VARCHAR},
+      </if>
+      <if test="record.imageProfessNo != null">
+        image_profess_no = #{record.imageProfessNo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.imageProfess != null">
+        image_profess = #{record.imageProfess,jdbcType=VARCHAR},
+      </if>
+      <if test="record.imageProfessThumb != null">
+        image_profess_thumb = #{record.imageProfessThumb,jdbcType=VARCHAR},
+      </if>
+      <if test="record.imageProfessBig != null">
+        image_profess_big = #{record.imageProfessBig,jdbcType=VARCHAR},
+      </if>
+      <if test="record.imageEdu != null">
+        image_edu = #{record.imageEdu,jdbcType=VARCHAR},
+      </if>
+      <if test="record.imageEduThumb != null">
+        image_edu_thumb = #{record.imageEduThumb,jdbcType=VARCHAR},
+      </if>
+      <if test="record.imageEduBig != null">
+        image_edu_big = #{record.imageEduBig,jdbcType=VARCHAR},
+      </if>
+      <if test="record.imageMarital != null">
+        image_marital = #{record.imageMarital,jdbcType=VARCHAR},
+      </if>
+      <if test="record.imageTotal != null">
+        image_total = #{record.imageTotal,jdbcType=VARCHAR},
+      </if>
+      <if test="record.imageTotalThumb != null">
+        image_total_thumb = #{record.imageTotalThumb,jdbcType=VARCHAR},
+      </if>
+      <if test="record.imageTotalBig != null">
+        image_total_big = #{record.imageTotalBig,jdbcType=VARCHAR},
+      </if>
+      <if test="record.imageTrain != null">
+        image_train = #{record.imageTrain,jdbcType=VARCHAR},
+      </if>
+      <if test="record.imageTrainThumb != null">
+        image_train_thumb = #{record.imageTrainThumb,jdbcType=VARCHAR},
+      </if>
+      <if test="record.imageTrainBig != null">
+        image_train_big = #{record.imageTrainBig,jdbcType=VARCHAR},
+      </if>
+      <if test="record.feeStandard != null">
+        fee_standard = #{record.feeStandard,jdbcType=TINYINT},
+      </if>
+      <if test="record.isAuth != null">
+        is_auth = #{record.isAuth,jdbcType=TINYINT},
+      </if>
+      <if test="record.wecharNum != null">
+        wechar_num = #{record.wecharNum,jdbcType=VARCHAR},
+      </if>
+      <if test="record.edu != null">
+        edu = #{record.edu,jdbcType=TINYINT},
+      </if>
+      <if test="record.famousRemark != null">
+        famous_remark = #{record.famousRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="record.askTotalTime != null">
+        ask_total_time = #{record.askTotalTime,jdbcType=INTEGER},
+      </if>
+      <if test="record.orderNum != null">
+        order_num = #{record.orderNum,jdbcType=INTEGER},
+      </if>
+      <if test="record.isTjIndex != null">
+        is_tj_index = #{record.isTjIndex,jdbcType=TINYINT},
+      </if>
+      <if test="record.tjIndexReason != null">
+        tj_index_reason = #{record.tjIndexReason,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isSupervisor != null">
+        is_supervisor = #{record.isSupervisor,jdbcType=TINYINT},
+      </if>
+      <if test="record.status != null">
+        `status` = #{record.status,jdbcType=TINYINT},
+      </if>
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updateTime != null">
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.isJoinListen != null">
+        is_join_listen = #{record.isJoinListen,jdbcType=TINYINT},
+      </if>
+      <if test="record.orderZan != null">
+        order_zan = #{record.orderZan,jdbcType=INTEGER},
+      </if>
+      <if test="record.nohelpNum != null">
+        nohelp_num = #{record.nohelpNum,jdbcType=INTEGER},
+      </if>
+      <if test="record.orderAns != null">
+        order_ans = #{record.orderAns,jdbcType=INTEGER},
+      </if>
+      <if test="record.orderAvaAnsTime != null">
+        order_ava_ans_time = #{record.orderAvaAnsTime,jdbcType=INTEGER},
+      </if>
+      <if test="record.workYears != null">
+        work_years = #{record.workYears,jdbcType=TINYINT},
+      </if>
+      <if test="record.tempScene != null">
+        temp_scene = #{record.tempScene,jdbcType=VARCHAR},
+      </if>
+      <if test="record.lineDefaultContent != null">
+        line_default_content = #{record.lineDefaultContent,jdbcType=VARCHAR},
+      </if>
+      <if test="record.homeAddress != null">
+        home_address = #{record.homeAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="record.consultRoomType != null">
+        consult_room_type = #{record.consultRoomType,jdbcType=TINYINT},
+      </if>
+      <if test="record.faceConsultAddress != null">
+        face_consult_address = #{record.faceConsultAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="record.specialPush != null">
+        special_push = #{record.specialPush,jdbcType=TINYINT},
+      </if>
+      <if test="record.showPosition != null">
+        show_position = #{record.showPosition,jdbcType=TINYINT},
+      </if>
+      <if test="record.yunClientId != null">
+        yun_client_id = #{record.yunClientId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.agent != null">
+        agent = #{record.agent,jdbcType=INTEGER},
+      </if>
+      <if test="record.feeRate != null">
+        fee_rate = #{record.feeRate,jdbcType=INTEGER},
+      </if>
+      <if test="record.feeRateWechat != null">
+        fee_rate_wechat = #{record.feeRateWechat,jdbcType=INTEGER},
+      </if>
+      <if test="record.organizeId != null">
+        organize_id = #{record.organizeId,jdbcType=INTEGER},
+      </if>
+      <if test="record.referrer != null">
+        referrer = #{record.referrer,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isTaobaoSunday != null">
+        is_taobao_sunday = #{record.isTaobaoSunday,jdbcType=TINYINT},
+      </if>
+      <if test="record.isChatOnline != null">
+        is_chat_online = #{record.isChatOnline,jdbcType=BIT},
+      </if>
+      <if test="record.setOnlineTime != null">
+        set_online_time = #{record.setOnlineTime,jdbcType=INTEGER},
+      </if>
+      <if test="record.chatAutoReply != null">
+        chat_auto_reply = #{record.chatAutoReply,jdbcType=VARCHAR},
+      </if>
+      <if test="record.jobCat != null">
+        job_cat = #{record.jobCat,jdbcType=TINYINT},
+      </if>
+      <if test="record.jobRemark != null">
+        job_remark = #{record.jobRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="record.recApp != null">
+        rec_app = #{record.recApp,jdbcType=TINYINT},
+      </if>
+      <if test="record.recRemark != null">
+        rec_remark = #{record.recRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="record.group != null">
+        `group` = #{record.group,jdbcType=INTEGER},
+      </if>
+      <if test="record.replyViolate != null">
+        reply_violate = #{record.replyViolate,jdbcType=BIT},
+      </if>
+      <if test="record.pseudonym != null">
+        pseudonym = #{record.pseudonym,jdbcType=VARCHAR},
+      </if>
+      <if test="record.level != null">
+        `level` = #{record.level,jdbcType=TINYINT},
+      </if>
+      <if test="record.abilityLevel != null">
+        ability_level = #{record.abilityLevel,jdbcType=TINYINT},
+      </if>
+      <if test="record.businessLevel != null">
+        business_level = #{record.businessLevel,jdbcType=TINYINT},
+      </if>
+      <if test="record.description != null">
+        description = #{record.description,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="record.profesBack != null">
+        profes_back = #{record.profesBack,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="record.goodAt != null">
+        good_at = #{record.goodAt,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="record.consultStyle != null">
+        consult_style = #{record.consultStyle,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="record.trainingBackground != null">
+        training_background = #{record.trainingBackground,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="record.freeTime != null">
+        free_time = #{record.freeTime,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="record.newBookingTime != null">
+        new_booking_time = #{record.newBookingTime,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="record.pushMsgCount != null">
+        push_msg_count = #{record.pushMsgCount,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="record.recDesc != null">
+        rec_desc = #{record.recDesc,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="record.firstDefaultReply != null">
+        first_default_reply = #{record.firstDefaultReply,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExampleWithBLOBs" parameterType="map">
+    update doctor
+    set id = #{record.id,jdbcType=INTEGER},
+      `uid` = #{record.uid,jdbcType=BIGINT},
+      `name` = #{record.name,jdbcType=VARCHAR},
+      small_image = #{record.smallImage,jdbcType=VARCHAR},
+      head = #{record.head,jdbcType=VARCHAR},
+      scene = #{record.scene,jdbcType=VARCHAR},
+      big_image = #{record.bigImage,jdbcType=VARCHAR},
+      title = #{record.title,jdbcType=VARCHAR},
+      hospital_id = #{record.hospitalId,jdbcType=INTEGER},
+      hospital_name = #{record.hospitalName,jdbcType=VARCHAR},
+      address = #{record.address,jdbcType=VARCHAR},
+      department_id = #{record.departmentId,jdbcType=INTEGER},
+      department_name = #{record.departmentName,jdbcType=VARCHAR},
+      recommend_index = #{record.recommendIndex,jdbcType=INTEGER},
+      service_index = #{record.serviceIndex,jdbcType=INTEGER},
+      physic_level = #{record.physicLevel,jdbcType=INTEGER},
+      is_allow_consult = #{record.isAllowConsult,jdbcType=BIT},
+      is_show = #{record.isShow,jdbcType=TINYINT},
+      is_hot = #{record.isHot,jdbcType=BIT},
+      reply_num = #{record.replyNum,jdbcType=INTEGER},
+      fans_num = #{record.fansNum,jdbcType=INTEGER},
+      tag_1 = #{record.tag1,jdbcType=VARCHAR},
+      tag_2 = #{record.tag2,jdbcType=VARCHAR},
+      tag_3 = #{record.tag3,jdbcType=VARCHAR},
+      image_idcard = #{record.imageIdcard,jdbcType=VARCHAR},
+      image_idcard_thumb = #{record.imageIdcardThumb,jdbcType=VARCHAR},
+      image_idcard_big = #{record.imageIdcardBig,jdbcType=VARCHAR},
+      image_idcardr = #{record.imageIdcardr,jdbcType=VARCHAR},
+      image_idcardr_thumb = #{record.imageIdcardrThumb,jdbcType=VARCHAR},
+      image_idcardr_big = #{record.imageIdcardrBig,jdbcType=VARCHAR},
+      image_profess_no = #{record.imageProfessNo,jdbcType=VARCHAR},
+      image_profess = #{record.imageProfess,jdbcType=VARCHAR},
+      image_profess_thumb = #{record.imageProfessThumb,jdbcType=VARCHAR},
+      image_profess_big = #{record.imageProfessBig,jdbcType=VARCHAR},
+      image_edu = #{record.imageEdu,jdbcType=VARCHAR},
+      image_edu_thumb = #{record.imageEduThumb,jdbcType=VARCHAR},
+      image_edu_big = #{record.imageEduBig,jdbcType=VARCHAR},
+      image_marital = #{record.imageMarital,jdbcType=VARCHAR},
+      image_total = #{record.imageTotal,jdbcType=VARCHAR},
+      image_total_thumb = #{record.imageTotalThumb,jdbcType=VARCHAR},
+      image_total_big = #{record.imageTotalBig,jdbcType=VARCHAR},
+      image_train = #{record.imageTrain,jdbcType=VARCHAR},
+      image_train_thumb = #{record.imageTrainThumb,jdbcType=VARCHAR},
+      image_train_big = #{record.imageTrainBig,jdbcType=VARCHAR},
+      fee_standard = #{record.feeStandard,jdbcType=TINYINT},
+      is_auth = #{record.isAuth,jdbcType=TINYINT},
+      wechar_num = #{record.wecharNum,jdbcType=VARCHAR},
+      edu = #{record.edu,jdbcType=TINYINT},
+      famous_remark = #{record.famousRemark,jdbcType=VARCHAR},
+      ask_total_time = #{record.askTotalTime,jdbcType=INTEGER},
+      order_num = #{record.orderNum,jdbcType=INTEGER},
+      is_tj_index = #{record.isTjIndex,jdbcType=TINYINT},
+      tj_index_reason = #{record.tjIndexReason,jdbcType=VARCHAR},
+      is_supervisor = #{record.isSupervisor,jdbcType=TINYINT},
+      `status` = #{record.status,jdbcType=TINYINT},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      is_join_listen = #{record.isJoinListen,jdbcType=TINYINT},
+      order_zan = #{record.orderZan,jdbcType=INTEGER},
+      nohelp_num = #{record.nohelpNum,jdbcType=INTEGER},
+      order_ans = #{record.orderAns,jdbcType=INTEGER},
+      order_ava_ans_time = #{record.orderAvaAnsTime,jdbcType=INTEGER},
+      work_years = #{record.workYears,jdbcType=TINYINT},
+      temp_scene = #{record.tempScene,jdbcType=VARCHAR},
+      line_default_content = #{record.lineDefaultContent,jdbcType=VARCHAR},
+      home_address = #{record.homeAddress,jdbcType=VARCHAR},
+      consult_room_type = #{record.consultRoomType,jdbcType=TINYINT},
+      face_consult_address = #{record.faceConsultAddress,jdbcType=VARCHAR},
+      special_push = #{record.specialPush,jdbcType=TINYINT},
+      show_position = #{record.showPosition,jdbcType=TINYINT},
+      yun_client_id = #{record.yunClientId,jdbcType=VARCHAR},
+      agent = #{record.agent,jdbcType=INTEGER},
+      fee_rate = #{record.feeRate,jdbcType=INTEGER},
+      fee_rate_wechat = #{record.feeRateWechat,jdbcType=INTEGER},
+      organize_id = #{record.organizeId,jdbcType=INTEGER},
+      referrer = #{record.referrer,jdbcType=VARCHAR},
+      is_taobao_sunday = #{record.isTaobaoSunday,jdbcType=TINYINT},
+      is_chat_online = #{record.isChatOnline,jdbcType=BIT},
+      set_online_time = #{record.setOnlineTime,jdbcType=INTEGER},
+      chat_auto_reply = #{record.chatAutoReply,jdbcType=VARCHAR},
+      job_cat = #{record.jobCat,jdbcType=TINYINT},
+      job_remark = #{record.jobRemark,jdbcType=VARCHAR},
+      rec_app = #{record.recApp,jdbcType=TINYINT},
+      rec_remark = #{record.recRemark,jdbcType=VARCHAR},
+      `group` = #{record.group,jdbcType=INTEGER},
+      reply_violate = #{record.replyViolate,jdbcType=BIT},
+      pseudonym = #{record.pseudonym,jdbcType=VARCHAR},
+      `level` = #{record.level,jdbcType=TINYINT},
+      ability_level = #{record.abilityLevel,jdbcType=TINYINT},
+      business_level = #{record.businessLevel,jdbcType=TINYINT},
+      description = #{record.description,jdbcType=LONGVARCHAR},
+      profes_back = #{record.profesBack,jdbcType=LONGVARCHAR},
+      good_at = #{record.goodAt,jdbcType=LONGVARCHAR},
+      consult_style = #{record.consultStyle,jdbcType=LONGVARCHAR},
+      training_background = #{record.trainingBackground,jdbcType=LONGVARCHAR},
+      free_time = #{record.freeTime,jdbcType=LONGVARCHAR},
+      new_booking_time = #{record.newBookingTime,jdbcType=LONGVARCHAR},
+      push_msg_count = #{record.pushMsgCount,jdbcType=LONGVARCHAR},
+      rec_desc = #{record.recDesc,jdbcType=LONGVARCHAR},
+      first_default_reply = #{record.firstDefaultReply,jdbcType=LONGVARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update doctor
+    set id = #{record.id,jdbcType=INTEGER},
+      `uid` = #{record.uid,jdbcType=BIGINT},
+      `name` = #{record.name,jdbcType=VARCHAR},
+      small_image = #{record.smallImage,jdbcType=VARCHAR},
+      head = #{record.head,jdbcType=VARCHAR},
+      scene = #{record.scene,jdbcType=VARCHAR},
+      big_image = #{record.bigImage,jdbcType=VARCHAR},
+      title = #{record.title,jdbcType=VARCHAR},
+      hospital_id = #{record.hospitalId,jdbcType=INTEGER},
+      hospital_name = #{record.hospitalName,jdbcType=VARCHAR},
+      address = #{record.address,jdbcType=VARCHAR},
+      department_id = #{record.departmentId,jdbcType=INTEGER},
+      department_name = #{record.departmentName,jdbcType=VARCHAR},
+      recommend_index = #{record.recommendIndex,jdbcType=INTEGER},
+      service_index = #{record.serviceIndex,jdbcType=INTEGER},
+      physic_level = #{record.physicLevel,jdbcType=INTEGER},
+      is_allow_consult = #{record.isAllowConsult,jdbcType=BIT},
+      is_show = #{record.isShow,jdbcType=TINYINT},
+      is_hot = #{record.isHot,jdbcType=BIT},
+      reply_num = #{record.replyNum,jdbcType=INTEGER},
+      fans_num = #{record.fansNum,jdbcType=INTEGER},
+      tag_1 = #{record.tag1,jdbcType=VARCHAR},
+      tag_2 = #{record.tag2,jdbcType=VARCHAR},
+      tag_3 = #{record.tag3,jdbcType=VARCHAR},
+      image_idcard = #{record.imageIdcard,jdbcType=VARCHAR},
+      image_idcard_thumb = #{record.imageIdcardThumb,jdbcType=VARCHAR},
+      image_idcard_big = #{record.imageIdcardBig,jdbcType=VARCHAR},
+      image_idcardr = #{record.imageIdcardr,jdbcType=VARCHAR},
+      image_idcardr_thumb = #{record.imageIdcardrThumb,jdbcType=VARCHAR},
+      image_idcardr_big = #{record.imageIdcardrBig,jdbcType=VARCHAR},
+      image_profess_no = #{record.imageProfessNo,jdbcType=VARCHAR},
+      image_profess = #{record.imageProfess,jdbcType=VARCHAR},
+      image_profess_thumb = #{record.imageProfessThumb,jdbcType=VARCHAR},
+      image_profess_big = #{record.imageProfessBig,jdbcType=VARCHAR},
+      image_edu = #{record.imageEdu,jdbcType=VARCHAR},
+      image_edu_thumb = #{record.imageEduThumb,jdbcType=VARCHAR},
+      image_edu_big = #{record.imageEduBig,jdbcType=VARCHAR},
+      image_marital = #{record.imageMarital,jdbcType=VARCHAR},
+      image_total = #{record.imageTotal,jdbcType=VARCHAR},
+      image_total_thumb = #{record.imageTotalThumb,jdbcType=VARCHAR},
+      image_total_big = #{record.imageTotalBig,jdbcType=VARCHAR},
+      image_train = #{record.imageTrain,jdbcType=VARCHAR},
+      image_train_thumb = #{record.imageTrainThumb,jdbcType=VARCHAR},
+      image_train_big = #{record.imageTrainBig,jdbcType=VARCHAR},
+      fee_standard = #{record.feeStandard,jdbcType=TINYINT},
+      is_auth = #{record.isAuth,jdbcType=TINYINT},
+      wechar_num = #{record.wecharNum,jdbcType=VARCHAR},
+      edu = #{record.edu,jdbcType=TINYINT},
+      famous_remark = #{record.famousRemark,jdbcType=VARCHAR},
+      ask_total_time = #{record.askTotalTime,jdbcType=INTEGER},
+      order_num = #{record.orderNum,jdbcType=INTEGER},
+      is_tj_index = #{record.isTjIndex,jdbcType=TINYINT},
+      tj_index_reason = #{record.tjIndexReason,jdbcType=VARCHAR},
+      is_supervisor = #{record.isSupervisor,jdbcType=TINYINT},
+      `status` = #{record.status,jdbcType=TINYINT},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      is_join_listen = #{record.isJoinListen,jdbcType=TINYINT},
+      order_zan = #{record.orderZan,jdbcType=INTEGER},
+      nohelp_num = #{record.nohelpNum,jdbcType=INTEGER},
+      order_ans = #{record.orderAns,jdbcType=INTEGER},
+      order_ava_ans_time = #{record.orderAvaAnsTime,jdbcType=INTEGER},
+      work_years = #{record.workYears,jdbcType=TINYINT},
+      temp_scene = #{record.tempScene,jdbcType=VARCHAR},
+      line_default_content = #{record.lineDefaultContent,jdbcType=VARCHAR},
+      home_address = #{record.homeAddress,jdbcType=VARCHAR},
+      consult_room_type = #{record.consultRoomType,jdbcType=TINYINT},
+      face_consult_address = #{record.faceConsultAddress,jdbcType=VARCHAR},
+      special_push = #{record.specialPush,jdbcType=TINYINT},
+      show_position = #{record.showPosition,jdbcType=TINYINT},
+      yun_client_id = #{record.yunClientId,jdbcType=VARCHAR},
+      agent = #{record.agent,jdbcType=INTEGER},
+      fee_rate = #{record.feeRate,jdbcType=INTEGER},
+      fee_rate_wechat = #{record.feeRateWechat,jdbcType=INTEGER},
+      organize_id = #{record.organizeId,jdbcType=INTEGER},
+      referrer = #{record.referrer,jdbcType=VARCHAR},
+      is_taobao_sunday = #{record.isTaobaoSunday,jdbcType=TINYINT},
+      is_chat_online = #{record.isChatOnline,jdbcType=BIT},
+      set_online_time = #{record.setOnlineTime,jdbcType=INTEGER},
+      chat_auto_reply = #{record.chatAutoReply,jdbcType=VARCHAR},
+      job_cat = #{record.jobCat,jdbcType=TINYINT},
+      job_remark = #{record.jobRemark,jdbcType=VARCHAR},
+      rec_app = #{record.recApp,jdbcType=TINYINT},
+      rec_remark = #{record.recRemark,jdbcType=VARCHAR},
+      `group` = #{record.group,jdbcType=INTEGER},
+      reply_violate = #{record.replyViolate,jdbcType=BIT},
+      pseudonym = #{record.pseudonym,jdbcType=VARCHAR},
+      `level` = #{record.level,jdbcType=TINYINT},
+      ability_level = #{record.abilityLevel,jdbcType=TINYINT},
+      business_level = #{record.businessLevel,jdbcType=TINYINT}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ydl.dream.intf.po.DoctorWithBLOBs">
+    update doctor
+    <set>
+      <if test="uid != null">
+        `uid` = #{uid,jdbcType=BIGINT},
+      </if>
+      <if test="name != null">
+        `name` = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="smallImage != null">
+        small_image = #{smallImage,jdbcType=VARCHAR},
+      </if>
+      <if test="head != null">
+        head = #{head,jdbcType=VARCHAR},
+      </if>
+      <if test="scene != null">
+        scene = #{scene,jdbcType=VARCHAR},
+      </if>
+      <if test="bigImage != null">
+        big_image = #{bigImage,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="hospitalId != null">
+        hospital_id = #{hospitalId,jdbcType=INTEGER},
+      </if>
+      <if test="hospitalName != null">
+        hospital_name = #{hospitalName,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="departmentId != null">
+        department_id = #{departmentId,jdbcType=INTEGER},
+      </if>
+      <if test="departmentName != null">
+        department_name = #{departmentName,jdbcType=VARCHAR},
+      </if>
+      <if test="recommendIndex != null">
+        recommend_index = #{recommendIndex,jdbcType=INTEGER},
+      </if>
+      <if test="serviceIndex != null">
+        service_index = #{serviceIndex,jdbcType=INTEGER},
+      </if>
+      <if test="physicLevel != null">
+        physic_level = #{physicLevel,jdbcType=INTEGER},
+      </if>
+      <if test="isAllowConsult != null">
+        is_allow_consult = #{isAllowConsult,jdbcType=BIT},
+      </if>
+      <if test="isShow != null">
+        is_show = #{isShow,jdbcType=TINYINT},
+      </if>
+      <if test="isHot != null">
+        is_hot = #{isHot,jdbcType=BIT},
+      </if>
+      <if test="replyNum != null">
+        reply_num = #{replyNum,jdbcType=INTEGER},
+      </if>
+      <if test="fansNum != null">
+        fans_num = #{fansNum,jdbcType=INTEGER},
+      </if>
+      <if test="tag1 != null">
+        tag_1 = #{tag1,jdbcType=VARCHAR},
+      </if>
+      <if test="tag2 != null">
+        tag_2 = #{tag2,jdbcType=VARCHAR},
+      </if>
+      <if test="tag3 != null">
+        tag_3 = #{tag3,jdbcType=VARCHAR},
+      </if>
+      <if test="imageIdcard != null">
+        image_idcard = #{imageIdcard,jdbcType=VARCHAR},
+      </if>
+      <if test="imageIdcardThumb != null">
+        image_idcard_thumb = #{imageIdcardThumb,jdbcType=VARCHAR},
+      </if>
+      <if test="imageIdcardBig != null">
+        image_idcard_big = #{imageIdcardBig,jdbcType=VARCHAR},
+      </if>
+      <if test="imageIdcardr != null">
+        image_idcardr = #{imageIdcardr,jdbcType=VARCHAR},
+      </if>
+      <if test="imageIdcardrThumb != null">
+        image_idcardr_thumb = #{imageIdcardrThumb,jdbcType=VARCHAR},
+      </if>
+      <if test="imageIdcardrBig != null">
+        image_idcardr_big = #{imageIdcardrBig,jdbcType=VARCHAR},
+      </if>
+      <if test="imageProfessNo != null">
+        image_profess_no = #{imageProfessNo,jdbcType=VARCHAR},
+      </if>
+      <if test="imageProfess != null">
+        image_profess = #{imageProfess,jdbcType=VARCHAR},
+      </if>
+      <if test="imageProfessThumb != null">
+        image_profess_thumb = #{imageProfessThumb,jdbcType=VARCHAR},
+      </if>
+      <if test="imageProfessBig != null">
+        image_profess_big = #{imageProfessBig,jdbcType=VARCHAR},
+      </if>
+      <if test="imageEdu != null">
+        image_edu = #{imageEdu,jdbcType=VARCHAR},
+      </if>
+      <if test="imageEduThumb != null">
+        image_edu_thumb = #{imageEduThumb,jdbcType=VARCHAR},
+      </if>
+      <if test="imageEduBig != null">
+        image_edu_big = #{imageEduBig,jdbcType=VARCHAR},
+      </if>
+      <if test="imageMarital != null">
+        image_marital = #{imageMarital,jdbcType=VARCHAR},
+      </if>
+      <if test="imageTotal != null">
+        image_total = #{imageTotal,jdbcType=VARCHAR},
+      </if>
+      <if test="imageTotalThumb != null">
+        image_total_thumb = #{imageTotalThumb,jdbcType=VARCHAR},
+      </if>
+      <if test="imageTotalBig != null">
+        image_total_big = #{imageTotalBig,jdbcType=VARCHAR},
+      </if>
+      <if test="imageTrain != null">
+        image_train = #{imageTrain,jdbcType=VARCHAR},
+      </if>
+      <if test="imageTrainThumb != null">
+        image_train_thumb = #{imageTrainThumb,jdbcType=VARCHAR},
+      </if>
+      <if test="imageTrainBig != null">
+        image_train_big = #{imageTrainBig,jdbcType=VARCHAR},
+      </if>
+      <if test="feeStandard != null">
+        fee_standard = #{feeStandard,jdbcType=TINYINT},
+      </if>
+      <if test="isAuth != null">
+        is_auth = #{isAuth,jdbcType=TINYINT},
+      </if>
+      <if test="wecharNum != null">
+        wechar_num = #{wecharNum,jdbcType=VARCHAR},
+      </if>
+      <if test="edu != null">
+        edu = #{edu,jdbcType=TINYINT},
+      </if>
+      <if test="famousRemark != null">
+        famous_remark = #{famousRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="askTotalTime != null">
+        ask_total_time = #{askTotalTime,jdbcType=INTEGER},
+      </if>
+      <if test="orderNum != null">
+        order_num = #{orderNum,jdbcType=INTEGER},
+      </if>
+      <if test="isTjIndex != null">
+        is_tj_index = #{isTjIndex,jdbcType=TINYINT},
+      </if>
+      <if test="tjIndexReason != null">
+        tj_index_reason = #{tjIndexReason,jdbcType=VARCHAR},
+      </if>
+      <if test="isSupervisor != null">
+        is_supervisor = #{isSupervisor,jdbcType=TINYINT},
+      </if>
+      <if test="status != null">
+        `status` = #{status,jdbcType=TINYINT},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isJoinListen != null">
+        is_join_listen = #{isJoinListen,jdbcType=TINYINT},
+      </if>
+      <if test="orderZan != null">
+        order_zan = #{orderZan,jdbcType=INTEGER},
+      </if>
+      <if test="nohelpNum != null">
+        nohelp_num = #{nohelpNum,jdbcType=INTEGER},
+      </if>
+      <if test="orderAns != null">
+        order_ans = #{orderAns,jdbcType=INTEGER},
+      </if>
+      <if test="orderAvaAnsTime != null">
+        order_ava_ans_time = #{orderAvaAnsTime,jdbcType=INTEGER},
+      </if>
+      <if test="workYears != null">
+        work_years = #{workYears,jdbcType=TINYINT},
+      </if>
+      <if test="tempScene != null">
+        temp_scene = #{tempScene,jdbcType=VARCHAR},
+      </if>
+      <if test="lineDefaultContent != null">
+        line_default_content = #{lineDefaultContent,jdbcType=VARCHAR},
+      </if>
+      <if test="homeAddress != null">
+        home_address = #{homeAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="consultRoomType != null">
+        consult_room_type = #{consultRoomType,jdbcType=TINYINT},
+      </if>
+      <if test="faceConsultAddress != null">
+        face_consult_address = #{faceConsultAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="specialPush != null">
+        special_push = #{specialPush,jdbcType=TINYINT},
+      </if>
+      <if test="showPosition != null">
+        show_position = #{showPosition,jdbcType=TINYINT},
+      </if>
+      <if test="yunClientId != null">
+        yun_client_id = #{yunClientId,jdbcType=VARCHAR},
+      </if>
+      <if test="agent != null">
+        agent = #{agent,jdbcType=INTEGER},
+      </if>
+      <if test="feeRate != null">
+        fee_rate = #{feeRate,jdbcType=INTEGER},
+      </if>
+      <if test="feeRateWechat != null">
+        fee_rate_wechat = #{feeRateWechat,jdbcType=INTEGER},
+      </if>
+      <if test="organizeId != null">
+        organize_id = #{organizeId,jdbcType=INTEGER},
+      </if>
+      <if test="referrer != null">
+        referrer = #{referrer,jdbcType=VARCHAR},
+      </if>
+      <if test="isTaobaoSunday != null">
+        is_taobao_sunday = #{isTaobaoSunday,jdbcType=TINYINT},
+      </if>
+      <if test="isChatOnline != null">
+        is_chat_online = #{isChatOnline,jdbcType=BIT},
+      </if>
+      <if test="setOnlineTime != null">
+        set_online_time = #{setOnlineTime,jdbcType=INTEGER},
+      </if>
+      <if test="chatAutoReply != null">
+        chat_auto_reply = #{chatAutoReply,jdbcType=VARCHAR},
+      </if>
+      <if test="jobCat != null">
+        job_cat = #{jobCat,jdbcType=TINYINT},
+      </if>
+      <if test="jobRemark != null">
+        job_remark = #{jobRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="recApp != null">
+        rec_app = #{recApp,jdbcType=TINYINT},
+      </if>
+      <if test="recRemark != null">
+        rec_remark = #{recRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="group != null">
+        `group` = #{group,jdbcType=INTEGER},
+      </if>
+      <if test="replyViolate != null">
+        reply_violate = #{replyViolate,jdbcType=BIT},
+      </if>
+      <if test="pseudonym != null">
+        pseudonym = #{pseudonym,jdbcType=VARCHAR},
+      </if>
+      <if test="level != null">
+        `level` = #{level,jdbcType=TINYINT},
+      </if>
+      <if test="abilityLevel != null">
+        ability_level = #{abilityLevel,jdbcType=TINYINT},
+      </if>
+      <if test="businessLevel != null">
+        business_level = #{businessLevel,jdbcType=TINYINT},
+      </if>
+      <if test="description != null">
+        description = #{description,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="profesBack != null">
+        profes_back = #{profesBack,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="goodAt != null">
+        good_at = #{goodAt,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="consultStyle != null">
+        consult_style = #{consultStyle,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="trainingBackground != null">
+        training_background = #{trainingBackground,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="freeTime != null">
+        free_time = #{freeTime,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="newBookingTime != null">
+        new_booking_time = #{newBookingTime,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="pushMsgCount != null">
+        push_msg_count = #{pushMsgCount,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="recDesc != null">
+        rec_desc = #{recDesc,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="firstDefaultReply != null">
+        first_default_reply = #{firstDefaultReply,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.ydl.dream.intf.po.DoctorWithBLOBs">
+    update doctor
+    set `uid` = #{uid,jdbcType=BIGINT},
+      `name` = #{name,jdbcType=VARCHAR},
+      small_image = #{smallImage,jdbcType=VARCHAR},
+      head = #{head,jdbcType=VARCHAR},
+      scene = #{scene,jdbcType=VARCHAR},
+      big_image = #{bigImage,jdbcType=VARCHAR},
+      title = #{title,jdbcType=VARCHAR},
+      hospital_id = #{hospitalId,jdbcType=INTEGER},
+      hospital_name = #{hospitalName,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
+      department_id = #{departmentId,jdbcType=INTEGER},
+      department_name = #{departmentName,jdbcType=VARCHAR},
+      recommend_index = #{recommendIndex,jdbcType=INTEGER},
+      service_index = #{serviceIndex,jdbcType=INTEGER},
+      physic_level = #{physicLevel,jdbcType=INTEGER},
+      is_allow_consult = #{isAllowConsult,jdbcType=BIT},
+      is_show = #{isShow,jdbcType=TINYINT},
+      is_hot = #{isHot,jdbcType=BIT},
+      reply_num = #{replyNum,jdbcType=INTEGER},
+      fans_num = #{fansNum,jdbcType=INTEGER},
+      tag_1 = #{tag1,jdbcType=VARCHAR},
+      tag_2 = #{tag2,jdbcType=VARCHAR},
+      tag_3 = #{tag3,jdbcType=VARCHAR},
+      image_idcard = #{imageIdcard,jdbcType=VARCHAR},
+      image_idcard_thumb = #{imageIdcardThumb,jdbcType=VARCHAR},
+      image_idcard_big = #{imageIdcardBig,jdbcType=VARCHAR},
+      image_idcardr = #{imageIdcardr,jdbcType=VARCHAR},
+      image_idcardr_thumb = #{imageIdcardrThumb,jdbcType=VARCHAR},
+      image_idcardr_big = #{imageIdcardrBig,jdbcType=VARCHAR},
+      image_profess_no = #{imageProfessNo,jdbcType=VARCHAR},
+      image_profess = #{imageProfess,jdbcType=VARCHAR},
+      image_profess_thumb = #{imageProfessThumb,jdbcType=VARCHAR},
+      image_profess_big = #{imageProfessBig,jdbcType=VARCHAR},
+      image_edu = #{imageEdu,jdbcType=VARCHAR},
+      image_edu_thumb = #{imageEduThumb,jdbcType=VARCHAR},
+      image_edu_big = #{imageEduBig,jdbcType=VARCHAR},
+      image_marital = #{imageMarital,jdbcType=VARCHAR},
+      image_total = #{imageTotal,jdbcType=VARCHAR},
+      image_total_thumb = #{imageTotalThumb,jdbcType=VARCHAR},
+      image_total_big = #{imageTotalBig,jdbcType=VARCHAR},
+      image_train = #{imageTrain,jdbcType=VARCHAR},
+      image_train_thumb = #{imageTrainThumb,jdbcType=VARCHAR},
+      image_train_big = #{imageTrainBig,jdbcType=VARCHAR},
+      fee_standard = #{feeStandard,jdbcType=TINYINT},
+      is_auth = #{isAuth,jdbcType=TINYINT},
+      wechar_num = #{wecharNum,jdbcType=VARCHAR},
+      edu = #{edu,jdbcType=TINYINT},
+      famous_remark = #{famousRemark,jdbcType=VARCHAR},
+      ask_total_time = #{askTotalTime,jdbcType=INTEGER},
+      order_num = #{orderNum,jdbcType=INTEGER},
+      is_tj_index = #{isTjIndex,jdbcType=TINYINT},
+      tj_index_reason = #{tjIndexReason,jdbcType=VARCHAR},
+      is_supervisor = #{isSupervisor,jdbcType=TINYINT},
+      `status` = #{status,jdbcType=TINYINT},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      is_join_listen = #{isJoinListen,jdbcType=TINYINT},
+      order_zan = #{orderZan,jdbcType=INTEGER},
+      nohelp_num = #{nohelpNum,jdbcType=INTEGER},
+      order_ans = #{orderAns,jdbcType=INTEGER},
+      order_ava_ans_time = #{orderAvaAnsTime,jdbcType=INTEGER},
+      work_years = #{workYears,jdbcType=TINYINT},
+      temp_scene = #{tempScene,jdbcType=VARCHAR},
+      line_default_content = #{lineDefaultContent,jdbcType=VARCHAR},
+      home_address = #{homeAddress,jdbcType=VARCHAR},
+      consult_room_type = #{consultRoomType,jdbcType=TINYINT},
+      face_consult_address = #{faceConsultAddress,jdbcType=VARCHAR},
+      special_push = #{specialPush,jdbcType=TINYINT},
+      show_position = #{showPosition,jdbcType=TINYINT},
+      yun_client_id = #{yunClientId,jdbcType=VARCHAR},
+      agent = #{agent,jdbcType=INTEGER},
+      fee_rate = #{feeRate,jdbcType=INTEGER},
+      fee_rate_wechat = #{feeRateWechat,jdbcType=INTEGER},
+      organize_id = #{organizeId,jdbcType=INTEGER},
+      referrer = #{referrer,jdbcType=VARCHAR},
+      is_taobao_sunday = #{isTaobaoSunday,jdbcType=TINYINT},
+      is_chat_online = #{isChatOnline,jdbcType=BIT},
+      set_online_time = #{setOnlineTime,jdbcType=INTEGER},
+      chat_auto_reply = #{chatAutoReply,jdbcType=VARCHAR},
+      job_cat = #{jobCat,jdbcType=TINYINT},
+      job_remark = #{jobRemark,jdbcType=VARCHAR},
+      rec_app = #{recApp,jdbcType=TINYINT},
+      rec_remark = #{recRemark,jdbcType=VARCHAR},
+      `group` = #{group,jdbcType=INTEGER},
+      reply_violate = #{replyViolate,jdbcType=BIT},
+      pseudonym = #{pseudonym,jdbcType=VARCHAR},
+      `level` = #{level,jdbcType=TINYINT},
+      ability_level = #{abilityLevel,jdbcType=TINYINT},
+      business_level = #{businessLevel,jdbcType=TINYINT},
+      description = #{description,jdbcType=LONGVARCHAR},
+      profes_back = #{profesBack,jdbcType=LONGVARCHAR},
+      good_at = #{goodAt,jdbcType=LONGVARCHAR},
+      consult_style = #{consultStyle,jdbcType=LONGVARCHAR},
+      training_background = #{trainingBackground,jdbcType=LONGVARCHAR},
+      free_time = #{freeTime,jdbcType=LONGVARCHAR},
+      new_booking_time = #{newBookingTime,jdbcType=LONGVARCHAR},
+      push_msg_count = #{pushMsgCount,jdbcType=LONGVARCHAR},
+      rec_desc = #{recDesc,jdbcType=LONGVARCHAR},
+      first_default_reply = #{firstDefaultReply,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ydl.dream.intf.po.Doctor">
+    update doctor
+    set `uid` = #{uid,jdbcType=BIGINT},
+      `name` = #{name,jdbcType=VARCHAR},
+      small_image = #{smallImage,jdbcType=VARCHAR},
+      head = #{head,jdbcType=VARCHAR},
+      scene = #{scene,jdbcType=VARCHAR},
+      big_image = #{bigImage,jdbcType=VARCHAR},
+      title = #{title,jdbcType=VARCHAR},
+      hospital_id = #{hospitalId,jdbcType=INTEGER},
+      hospital_name = #{hospitalName,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
+      department_id = #{departmentId,jdbcType=INTEGER},
+      department_name = #{departmentName,jdbcType=VARCHAR},
+      recommend_index = #{recommendIndex,jdbcType=INTEGER},
+      service_index = #{serviceIndex,jdbcType=INTEGER},
+      physic_level = #{physicLevel,jdbcType=INTEGER},
+      is_allow_consult = #{isAllowConsult,jdbcType=BIT},
+      is_show = #{isShow,jdbcType=TINYINT},
+      is_hot = #{isHot,jdbcType=BIT},
+      reply_num = #{replyNum,jdbcType=INTEGER},
+      fans_num = #{fansNum,jdbcType=INTEGER},
+      tag_1 = #{tag1,jdbcType=VARCHAR},
+      tag_2 = #{tag2,jdbcType=VARCHAR},
+      tag_3 = #{tag3,jdbcType=VARCHAR},
+      image_idcard = #{imageIdcard,jdbcType=VARCHAR},
+      image_idcard_thumb = #{imageIdcardThumb,jdbcType=VARCHAR},
+      image_idcard_big = #{imageIdcardBig,jdbcType=VARCHAR},
+      image_idcardr = #{imageIdcardr,jdbcType=VARCHAR},
+      image_idcardr_thumb = #{imageIdcardrThumb,jdbcType=VARCHAR},
+      image_idcardr_big = #{imageIdcardrBig,jdbcType=VARCHAR},
+      image_profess_no = #{imageProfessNo,jdbcType=VARCHAR},
+      image_profess = #{imageProfess,jdbcType=VARCHAR},
+      image_profess_thumb = #{imageProfessThumb,jdbcType=VARCHAR},
+      image_profess_big = #{imageProfessBig,jdbcType=VARCHAR},
+      image_edu = #{imageEdu,jdbcType=VARCHAR},
+      image_edu_thumb = #{imageEduThumb,jdbcType=VARCHAR},
+      image_edu_big = #{imageEduBig,jdbcType=VARCHAR},
+      image_marital = #{imageMarital,jdbcType=VARCHAR},
+      image_total = #{imageTotal,jdbcType=VARCHAR},
+      image_total_thumb = #{imageTotalThumb,jdbcType=VARCHAR},
+      image_total_big = #{imageTotalBig,jdbcType=VARCHAR},
+      image_train = #{imageTrain,jdbcType=VARCHAR},
+      image_train_thumb = #{imageTrainThumb,jdbcType=VARCHAR},
+      image_train_big = #{imageTrainBig,jdbcType=VARCHAR},
+      fee_standard = #{feeStandard,jdbcType=TINYINT},
+      is_auth = #{isAuth,jdbcType=TINYINT},
+      wechar_num = #{wecharNum,jdbcType=VARCHAR},
+      edu = #{edu,jdbcType=TINYINT},
+      famous_remark = #{famousRemark,jdbcType=VARCHAR},
+      ask_total_time = #{askTotalTime,jdbcType=INTEGER},
+      order_num = #{orderNum,jdbcType=INTEGER},
+      is_tj_index = #{isTjIndex,jdbcType=TINYINT},
+      tj_index_reason = #{tjIndexReason,jdbcType=VARCHAR},
+      is_supervisor = #{isSupervisor,jdbcType=TINYINT},
+      `status` = #{status,jdbcType=TINYINT},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      is_join_listen = #{isJoinListen,jdbcType=TINYINT},
+      order_zan = #{orderZan,jdbcType=INTEGER},
+      nohelp_num = #{nohelpNum,jdbcType=INTEGER},
+      order_ans = #{orderAns,jdbcType=INTEGER},
+      order_ava_ans_time = #{orderAvaAnsTime,jdbcType=INTEGER},
+      work_years = #{workYears,jdbcType=TINYINT},
+      temp_scene = #{tempScene,jdbcType=VARCHAR},
+      line_default_content = #{lineDefaultContent,jdbcType=VARCHAR},
+      home_address = #{homeAddress,jdbcType=VARCHAR},
+      consult_room_type = #{consultRoomType,jdbcType=TINYINT},
+      face_consult_address = #{faceConsultAddress,jdbcType=VARCHAR},
+      special_push = #{specialPush,jdbcType=TINYINT},
+      show_position = #{showPosition,jdbcType=TINYINT},
+      yun_client_id = #{yunClientId,jdbcType=VARCHAR},
+      agent = #{agent,jdbcType=INTEGER},
+      fee_rate = #{feeRate,jdbcType=INTEGER},
+      fee_rate_wechat = #{feeRateWechat,jdbcType=INTEGER},
+      organize_id = #{organizeId,jdbcType=INTEGER},
+      referrer = #{referrer,jdbcType=VARCHAR},
+      is_taobao_sunday = #{isTaobaoSunday,jdbcType=TINYINT},
+      is_chat_online = #{isChatOnline,jdbcType=BIT},
+      set_online_time = #{setOnlineTime,jdbcType=INTEGER},
+      chat_auto_reply = #{chatAutoReply,jdbcType=VARCHAR},
+      job_cat = #{jobCat,jdbcType=TINYINT},
+      job_remark = #{jobRemark,jdbcType=VARCHAR},
+      rec_app = #{recApp,jdbcType=TINYINT},
+      rec_remark = #{recRemark,jdbcType=VARCHAR},
+      `group` = #{group,jdbcType=INTEGER},
+      reply_violate = #{replyViolate,jdbcType=BIT},
+      pseudonym = #{pseudonym,jdbcType=VARCHAR},
+      `level` = #{level,jdbcType=TINYINT},
+      ability_level = #{abilityLevel,jdbcType=TINYINT},
+      business_level = #{businessLevel,jdbcType=TINYINT}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

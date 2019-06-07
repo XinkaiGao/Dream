@@ -10,8 +10,8 @@
 		</commentGenerator>
 		<!--数据库链接地址账号密码 -->
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-			connectionURL="jdbc:mysql://ydldbhost/ydl?serverTimezone=Hongkong&amp;autoReconnect=true&amp;failOverReadOnly=false&amp;tinyInt1isBit=false"
-			userId="ydl" password="tt12345">
+			connectionURL="jdbc:mysql://localhost/ydl?serverTimezone=Hongkong&amp;autoReconnect=true&amp;failOverReadOnly=false&amp;tinyInt1isBit=false"
+			userId="root" password="rghyrg123456">
 		</jdbcConnection>
 		<javaTypeResolver>
 			<property name="forceBigDecimals" value="false" />
@@ -24,5 +24,7 @@
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
 		<!--生成对应表及类名 -->
+
+		<table tableName="doctor" domainObjectName="Doctor" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
 	</context>
 </generatorConfiguration>

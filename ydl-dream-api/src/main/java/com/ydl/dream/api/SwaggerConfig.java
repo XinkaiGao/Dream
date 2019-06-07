@@ -26,12 +26,14 @@ public class SwaggerConfig {
 
 	@Bean
 	public Docket createRestApi() {
-		return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo()).select().apis(RequestHandlerSelectors.basePackage("com.ydl.dream.api.apis"))
+		return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo()).select()
+				.apis(RequestHandlerSelectors.basePackage("com.ydl.dream.api.apis"))
 				.paths(PathSelectors.any()).build();
 	}
 
 	private ApiInfo apiInfo() {
-		ApiInfo apiInfo = new ApiInfoBuilder().title("壹点灵服务端接口文档").description("壹点灵接口管理").license("MIT").licenseUrl("http://opensource.org/licenses/MIT")
+		ApiInfo apiInfo = new ApiInfoBuilder().title("壹点灵服务端接口文档").description("壹点灵接口管理")
+				.license("MIT").licenseUrl("http://opensource.org/licenses/MIT")
 				.contact(new Contact("", "", "")).version("1.0").build();
 
 		return apiInfo;

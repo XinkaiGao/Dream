@@ -1,0 +1,4 @@
+2018-12-28 17:40:04.151 [main] INFO  com.ydl.dream.api.ApiApplication - Starting ApiApplication on gaoxinkais-MacBook-Pro.local with PID 3760 (/Users/xinkaiGao/Documents/Dream/ydl-dream-api/target/classes started by xinkaiGao in /Users/xinkaiGao/Documents/Dream)
+2018-12-28 17:40:04.152 [main] DEBUG com.ydl.dream.api.ApiApplication - Running with Spring Boot v1.5.7.RELEASE, Spring v4.3.11.RELEASE
+2018-12-28 17:40:04.154 [main] INFO  com.ydl.dream.api.ApiApplication - No active profile set, falling back to default profiles: default
+2018-12-28 17:40:10.440 [main] INFO  com.ydl.dream.api.ApiApplication - Started ApiApplication in 6.888 seconds (JVM running for 8.967)

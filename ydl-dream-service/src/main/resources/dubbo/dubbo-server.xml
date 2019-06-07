@@ -9,4 +9,5 @@
 	<dubbo:protocol name="dubbo" port="30007" threads="200"/>
 	<dubbo:protocol name="jsonrpc" port="30008" threads="200"/>
 	<dubbo:provider executes="200" loadbalance="roundrobin" retries="0" timeout="1000"/>
+	<dubbo:service interface="com.ydl.dream.intf.facade.DoctorFacade" version="1.0.0" ref="doctorFacadeImpl"/>
 </beans>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ydl.dream.service.dao.DoctorMapper" >
+
+
+    <select id="queryDoctorByIdList" resultType="com.ydl.dream.intf.po.Doctor">
+  
+        select * from `doctor` where id in
+        
+        <foreach item="doctorId" index="index" collection="doctorIds"
+            open="(" separator="," close=")">
+          #{doctorId}
+        </foreach>
+
+    </select>
+
+</mapper>

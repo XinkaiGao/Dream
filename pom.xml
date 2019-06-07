@@ -31,7 +31,7 @@
 				<ydl.jdbc.driver>com.mysql.jdbc.Driver</ydl.jdbc.driver>
 				<ydl.jdbc.url>jdbc:mysql://localhost:3306/ydl?zeroDateTimeBehavior=convertToNull&amp;characterEncoding=UTF-8</ydl.jdbc.url>
 				<ydl.jdbc.username>root</ydl.jdbc.username>
-				<ydl.jdbc.password>123456</ydl.jdbc.password>
+				<ydl.jdbc.password>rghyrg123456</ydl.jdbc.password>
 
 				<!-- dubbo registry server address -->
 				<dubbo.provider.address>zookeeper://127.0.0.1:2181</dubbo.provider.address>

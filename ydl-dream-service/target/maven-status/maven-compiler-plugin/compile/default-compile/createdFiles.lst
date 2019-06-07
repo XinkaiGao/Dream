@@ -1,1 +1,5 @@
+com/ydl/dream/service/biz/impl/DoctorBizImpl.class
 com/ydl/dream/service/StarterApplication.class
+com/ydl/dream/service/dao/DoctorMapper.class
+com/ydl/dream/service/facade/DoctorFacadeImpl.class
+com/ydl/dream/service/biz/DoctorBiz.class
